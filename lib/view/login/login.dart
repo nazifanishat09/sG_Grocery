@@ -56,7 +56,7 @@ class _LogInPageState extends State<LogInPage> {
               kyboard: TextInputType.visiblePassword,
             ),
             SizedBox(height: 20),
-            ButtonWidget(),
+            ButtonWidget(title: 'Login',fs: 18,fw: FontWeight.w600,fc: Colors.white,),
             SizedBox(height: 20),
             Row(
               spacing: 5,

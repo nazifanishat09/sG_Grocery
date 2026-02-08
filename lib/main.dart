@@ -2,6 +2,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:sg_grocery/view/registerUI/registerPage.dart';
 import 'package:sg_grocery/view/splash/splash_page.dart';
 
 void main (){
@@ -19,7 +20,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(debugShowCheckedModeBanner: true,
-      home: SplashPage(),
+      home: Registerpage(),
 
     );
   }

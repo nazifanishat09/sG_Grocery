@@ -4,8 +4,12 @@ import 'custom_text.dart';
 
 class ButtonWidget extends StatelessWidget {
   const ButtonWidget({
-    super.key,
+    super.key, required this.title, this.fs, this.fw, this.fc,
   });
+  final String title;
+  final double? fs;
+  final FontWeight? fw;
+  final Color? fc;
 
   @override
   Widget build(BuildContext context) {
@@ -17,12 +21,10 @@ class ButtonWidget extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),
       ),
       child: Center(
-        child: CustomTextWidget(
-          title: "Login",
-          fc: Colors.white,
-          fw: FontWeight.w600,
-          fs: 18,
-        ),
+        child: Text("$title",
+        style: TextStyle(
+          fontWeight: fw, fontSize: fs,color:fc,
+        ),)
       ),
     );
   }
