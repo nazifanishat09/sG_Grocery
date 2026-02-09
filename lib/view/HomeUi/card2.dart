@@ -3,7 +3,18 @@ import 'package:flutter/material.dart';
 import '../widget/custom_text.dart';
 
 class CardWidget2 extends StatelessWidget {
-  const CardWidget2({super.key, required this.title, this.subTitle1, this.subTitle2, this.fs1, this.fw1, this.fC1, this.fs2, this.fw2, this.fC2});
+  const CardWidget2({
+    super.key,
+    required this.title,
+    this.subTitle1,
+    this.subTitle2,
+    this.fs1,
+    this.fw1,
+    this.fC1,
+    this.fs2,
+    this.fw2,
+    this.fC2, required this.img,
+  });
   final String title;
   final String? subTitle1;
   final double? fs1;
@@ -13,8 +24,7 @@ class CardWidget2 extends StatelessWidget {
   final double? fs2;
   final FontWeight? fw2;
   final Color? fC2;
-
-
+  final String img;
 
   @override
   Widget build(BuildContext context) {
@@ -40,17 +50,18 @@ class CardWidget2 extends StatelessWidget {
                 padding: const EdgeInsets.all(10),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   // spacing: 8,
                   children: [
                     SizedBox(height: 5),
                     Center(
-                      child: Image.network(
-                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ66ubNfMxRuPH4cP2X5XvaF_lU3aKILmR9VQ&s",
-                        width: 86,
-                        height: 92,
+                      child: Image.asset(
+                        "$img",
+                        width: 100,
+                        height: 100,
                       ),
                     ),
+                    SizedBox(height: 30),
                     CustomTextWidget(
                       title: "$title",
                       fs: 16,
@@ -61,25 +72,45 @@ class CardWidget2 extends StatelessWidget {
                     //   fs: 16,
                     //   fw: FontWeight.w700,
                     // ),
-                   // SizedBox(height: 10,),
+                    SizedBox(height: 10),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
+                        // Left Text
+                        if (subTitle1 != null && subTitle1!.isNotEmpty)
+                          Text(
+                            subTitle1!,
+                            style: TextStyle(
+                              color: fC1 ?? Colors.black, // null হলে default
+                              fontWeight: fw1 ?? FontWeight.normal,
+                              fontSize: fs1 ?? 14,
+                            ),
+                          )
+                        else
+                          SizedBox.shrink(), // null হলে empty space
 
-                      Text("$subTitle1",style: TextStyle(
-                        color: fC1, fontWeight: fw1,fontSize: fs1,
-                      ),),
-                      Text("$subTitle2",style: TextStyle(
-                        color: fC2, fontWeight:fw2,fontSize:fs2,
-                      ),),
-                    ],)
+                        // Right Text
+                        if (subTitle2 != null && subTitle2!.isNotEmpty)
+                          Text(
+                            subTitle2!,
+                            style: TextStyle(
+                              color: fC2 ?? Colors.black,
+                              fontWeight: fw2 ?? FontWeight.normal,
+                              fontSize: fs2 ?? 14,
+                            ),
+                          )
+                        else
+                          SizedBox.shrink(),
+                      ],
+                    )
+
                   ],
                 ),
               ),
             ),
             Positioned(
               top: 10,
-              left:10,
+              left: 10,
               child: Container(
                 height: 41,
                 width: 58.17,
