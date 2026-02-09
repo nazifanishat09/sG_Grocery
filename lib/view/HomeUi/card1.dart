@@ -2,12 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../widget/custom_text.dart';
 
-
-
 class CardWidget1 extends StatelessWidget {
-  const CardWidget1({
-    super.key,
-  });
+  const CardWidget1({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +11,8 @@ class CardWidget1 extends StatelessWidget {
       height: 120,
       child: Padding(
         padding: const EdgeInsets.only(top: 20),
-        child: ListView.builder(      clipBehavior: Clip.none,
+        child: ListView.builder(
+          clipBehavior: Clip.none,
 
           itemCount: 10,
           scrollDirection: Axis.horizontal,

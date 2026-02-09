@@ -6,18 +6,26 @@ class CustomTextWidget extends StatelessWidget {
     this.fw,
     this.fc,
     this.fs,
-    required this.title,
+    required this.title, this.maxLine, this.overFlow,
   });
   final FontWeight? fw;
   final Color? fc;
   final double? fs;
   final String title;
+  final int? maxLine;
+  final TextOverflow? overFlow;
 
   @override
   Widget build(BuildContext context) {
     return Text(
-      "$title",
-      style: TextStyle(fontSize: fs, color: fc, fontWeight: fw),
+      "$title",maxLines: 1,
+      overflow: TextOverflow.ellipsis,
+      style: TextStyle(
+        fontSize: fs, color: fc, fontWeight: fw,
+
+
+
+      ),
     );
   }
 }
