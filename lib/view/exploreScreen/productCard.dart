@@ -4,9 +4,12 @@ import '../widget/custom_text.dart';
 
 class ProductCardWidget extends StatelessWidget {
   const ProductCardWidget({
-    super.key,
+    super.key, required this.title, required this.subTitle, required this.subTitle2, required this.img,
   });
-
+final String title;
+  final String subTitle;
+  final String subTitle2;
+  final String img;
   @override
   Widget build(BuildContext context) {
     return SizedBox(height: 150,
@@ -25,10 +28,10 @@ class ProductCardWidget extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [SizedBox(height: 10,),
-                Center(child: Image(image: AssetImage("assets/image1.png"))),
+                Center(child: Image(image: AssetImage("$img"),height: 53,width: 76,)),
                 SizedBox(height: 8,),
                 CustomTextWidget(
-                  title: "Jaggery Powder",
+                  title: title,
                   fs: 12,
                   fw: FontWeight.w500,fc:Colors.grey[700] ,
                 ),
@@ -36,7 +39,7 @@ class ProductCardWidget extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     CustomTextWidget(
-                      title: "500 g",
+                      title:subTitle,
                       fs: 12,
                       fw: FontWeight.w400,
                       fc: Colors.grey,
@@ -53,7 +56,7 @@ class ProductCardWidget extends StatelessWidget {
                   ],
                 ),
                 CustomTextWidget(
-                  title: "\$3",
+                  title: subTitle2,
                   fs: 12,
                   fw: FontWeight.w600,
                 ),
