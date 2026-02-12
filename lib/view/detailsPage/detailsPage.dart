@@ -13,16 +13,6 @@ class _DetailsPageState extends State<DetailsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.green,
-        leading: Image(image: AssetImage("assets/backArrowWhite.png")),
-        title: CustomTextWidget(
-          title: "Details",
-          fs: 22,
-          fw: FontWeight.w700,
-          fc: Colors.white,
-        ),
-      ),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -30,7 +20,7 @@ class _DetailsPageState extends State<DetailsPage> {
               clipBehavior: Clip.none,
               children: [
                 Container(
-                  height: 200,
+                  height: 229,
                   width: 428,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.only(
@@ -38,6 +28,22 @@ class _DetailsPageState extends State<DetailsPage> {
                       bottomLeft: Radius.circular(30),
                     ),
                     color: Colors.green,
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 20,bottom: 100,left: 10),
+                    child: Row(
+                      spacing: 30,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Image(image: AssetImage("assets/backArrowWhite.png")),
+                        CustomTextWidget(
+                          title: "Details",
+                          fs: 22,
+                          fw: FontWeight.w700,
+                          fc: Colors.white,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 Positioned(
