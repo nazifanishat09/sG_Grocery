@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:sg_grocery/view/widget/button_widget.dart';
 import 'package:sg_grocery/view/widget/custom_text.dart';
 
+import '../widget/customAppber.dart';
+
 class DetailsPage extends StatefulWidget {
   const DetailsPage({super.key});
 
@@ -29,22 +31,7 @@ class _DetailsPageState extends State<DetailsPage> {
                     ),
                     color: Colors.green,
                   ),
-                  child: Padding(
-                    padding: const EdgeInsets.only(top: 20,bottom: 100,left: 10),
-                    child: Row(
-                      spacing: 30,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Image(image: AssetImage("assets/backArrowWhite.png")),
-                        CustomTextWidget(
-                          title: "Details",
-                          fs: 22,
-                          fw: FontWeight.w700,
-                          fc: Colors.white,
-                        ),
-                      ],
-                    ),
-                  ),
+                  child: CustomAppBerWidget(title: 'Details',),
                 ),
                 Positioned(
                   bottom: -100,
@@ -240,3 +227,5 @@ class _DetailsPageState extends State<DetailsPage> {
     );
   }
 }
+
+
