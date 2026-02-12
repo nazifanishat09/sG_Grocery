@@ -78,7 +78,7 @@ class _RegisterpageState extends State<Registerpage> {
                 title: 'Register',
                 fw: FontWeight.w600,
                 fs: 18,
-                fc: Colors.white,
+                fc: Colors.white, bHeight:50, bWidth: 396, cC: Colors.green, radius: 10,
               ),
               SizedBox(height: 20),
               Row(
