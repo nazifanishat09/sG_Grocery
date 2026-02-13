@@ -2,6 +2,7 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:sg_grocery/view/widget/customAppber.dart';
+import 'package:sg_grocery/view/widget/custom_text.dart';
 
 class MySubscription extends StatefulWidget {
   const MySubscription({super.key});
@@ -23,39 +24,193 @@ class _MySubscriptionState extends State<MySubscription> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.green,
-      body: Padding(
-        padding: const EdgeInsets.all(10),
-        child: Column(
-          children: [
-            SizedBox(height: 20),
-            CustomAppBerWidget(title: "My Subscription"),
-            Container(
-              height: 51,width: 396,decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(5),
+      body: Column(
+        children: [
+          SizedBox(height: 20),
+          Padding(
+            padding: const EdgeInsets.only(top: 20, bottom: 20, left: 10),
+            child: CustomAppBerWidget(title: "My Subscription"),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(10),
+            child: DropdownButtonFormField<String>(
+              //dropdownColor:Colors.green[100] ,
+              decoration: InputDecoration(
+                filled: true,
+                fillColor: Colors.white,
+                border: OutlineInputBorder(borderSide: BorderSide.none),
+              ),
+              icon: Icon(Icons.keyboard_arrow_down_outlined),
 
-            ),child:  Center(
-              child: DropdownButton<String>(
+              // initialValue: dropDownvalue,
 
-                value: dropDownvalue == "" ? null : dropDownvalue,
+              // initialValue: dropDownvalue == "" ? null : dropDownvalue,
+              hint: Text("Subscription -Weekly"),
+              items: name.map((v) {
+                log("$v");
+                return DropdownMenuItem<String>(value: v, child: Text(v));
+              }).toList(),
+              onChanged: (c) {
+                dropDownvalue = c;
+                setState(() {});
 
-                hint: Text("Subscription -Weekly"),
-                items: name.map((v) {
-                  return DropdownMenuItem<String>(value: v, child: Text(v));
-                }).toList(),
-                onChanged: (c) {
-                  dropDownvalue = c;
-                  setState(() {});
-
-                  log("$dropDownvalue");
-                },underline: SizedBox(),
+                log("$dropDownvalue");
+              },
+            ),
+          ),
+          Expanded(
+            child: Container(
+              height: 728,
+              width: 430,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(30),
+                  topRight: Radius.circular(30),
+                ),
+              ),
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(20),
+                    child: Row(
+                      spacing: 10,
+                      children: [
+                        CustomTextWidget(
+                          title: "Today",
+                          fs: 18,
+                          fw: FontWeight.w900,
+                          fc: Colors.grey[700],
+                        ),
+                        CustomTextWidget(
+                          title: "(23 September 2021)",
+                          fs: 18,
+                          fw: FontWeight.w400,
+                          fc: Colors.grey[600],
+                        ),
+                        Icon(
+                          Icons.calendar_month_outlined,
+                          color: Colors.grey[600],
+                        ),
+                      ],
+                    ),
+                  ),
+                  Card(
+                    color: Colors.white,
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Image(image: AssetImage("assets/fortune.png")),
+                        Column(
+                          spacing: 10,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              spacing: 120,
+                              children: [
+                                CustomTextWidget(
+                                  title: "Fortune rice",
+                                  fs: 16,
+                                  fw: FontWeight.w600,
+                                  fc: Colors.grey[700],
+                                ),
+                                CustomTextWidget(
+                                  title: "Qty : 2",
+                                  fw: FontWeight.w600,
+                                  fs: 14,
+                                  fc: Colors.grey[600],
+                                ),
+                              ],
+                            ),
+                            CustomTextWidget(
+                              title: "1 kg",
+                              fw: FontWeight.w400,
+                              fs: 14,
+                              fc: Colors.grey,
+                            ),
+                            Row(
+                              children: [
+                                CustomTextWidget(
+                                  title: "\$3",
+                                  fs: 18,
+                                  fw: FontWeight.w700,
+                                  fc: Colors.grey[800],
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 107.9),
+                                  child: Container(
+                                    width: 159,
+                                    height: 43,
+                                    decoration: BoxDecoration(
+                                      color: Color(0xff55AB60),
+                                      borderRadius: BorderRadius.only(
+                                        topLeft: Radius.circular(10),
+                                        bottomRight: Radius.circular(10),
+                                      ),
+                                    ),
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          CustomTextWidget(
+                                            title: "M",
+                                            fs: 14,
+                                            fw: FontWeight.w700,
+                                            fc: Colors.white,
+                                          ),
+                                          CustomTextWidget(
+                                            title: "T",
+                                            fs: 14,
+                                            fw: FontWeight.w700,
+                                            fc: Colors.white,
+                                          ),
+                                          CustomTextWidget(
+                                            title: "W",
+                                            fs: 14,
+                                            fw: FontWeight.w700,
+                                            fc: Colors.white,
+                                          ),
+                                          CustomTextWidget(
+                                            title: "T",
+                                            fs: 14,
+                                            fw: FontWeight.w700,
+                                            fc: Colors.white,
+                                          ),
+                                          CustomTextWidget(
+                                            title: "F",
+                                            fs: 14,
+                                            fw: FontWeight.w700,
+                                            fc: Colors.white,
+                                          ),
+                                          CustomTextWidget(
+                                            title: "S",
+                                            fs: 14,
+                                            fw: FontWeight.w700,
+                                            fc: Colors.white,
+                                          ),
+                                          CustomTextWidget(
+                                            title: "S",
+                                            fs: 14,
+                                            fw: FontWeight.w700,
+                                            fc: Colors.white,
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
               ),
             ),
-
-            ),
-
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

@@ -12,7 +12,7 @@ class SliderWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CarouselSlider(
-      options: CarouselOptions(height:154,viewportFraction: .9,autoPlay: true),
+      options: CarouselOptions(height:154,viewportFraction: 1,autoPlay: true),
       items: sl.map((i) {
         return Builder(
           builder: (BuildContext context) {

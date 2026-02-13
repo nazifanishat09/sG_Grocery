@@ -22,6 +22,7 @@ class _DetailsPageState extends State<DetailsPage> {
               clipBehavior: Clip.none,
               children: [
                 Container(
+                  padding: EdgeInsets.only(left: 10, bottom: 90),
                   height: 229,
                   width: 428,
                   decoration: BoxDecoration(
@@ -31,7 +32,7 @@ class _DetailsPageState extends State<DetailsPage> {
                     ),
                     color: Colors.green,
                   ),
-                  child: CustomAppBerWidget(title: 'Details',),
+                  child: CustomAppBerWidget(title: 'Details'),
                 ),
                 Positioned(
                   bottom: -100,
@@ -103,7 +104,7 @@ class _DetailsPageState extends State<DetailsPage> {
                   CustomTextWidget(
                     title:
                         "Green apples have less sugar and carbs, and more fiber, protein, potassium, iron, and vitamin K, taking the lead as a healthier variety, although the differences are ever so slight.",
-                    maxLine: 5,
+                    // maxLine: 5,
                     fs: 16,
                     fw: FontWeight.w400,
                     fc: Colors.grey,
@@ -227,5 +228,3 @@ class _DetailsPageState extends State<DetailsPage> {
     );
   }
 }
-
-

@@ -38,9 +38,9 @@ class _FruitsScreenState extends State<FruitsScreen> {
           ),
           SizedBox(height: 10),
           Expanded(
-            child: Container(
+            child: Container(padding: EdgeInsets.only(top: 15,right: 10,left: 10),
               width: 428,
-              height: 1129,
+              height: MediaQuery.sizeOf(context).height,//1129,
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.only(

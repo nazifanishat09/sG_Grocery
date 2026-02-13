@@ -13,7 +13,7 @@ final TextInputType kyboard;
       keyboardType: kyboard,
       cursorColor: Colors.green,
       decoration: InputDecoration(
-        hintText: "$title",
+        hintText: title,
         hintStyle: TextStyle(fontWeight: FontWeight.w400, fontSize: 16),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),

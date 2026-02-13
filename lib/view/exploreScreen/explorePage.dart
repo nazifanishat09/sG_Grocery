@@ -15,7 +15,7 @@ class _ExplorepageState extends State<Explorepage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      appBar: AppBar(forceMaterialTransparency: true,
         leading: Image(image: AssetImage("assets/backArrow.png")),
         centerTitle: true,
         title: CustomTextWidget(title: "Explore", fs: 22, fw: FontWeight.w700),

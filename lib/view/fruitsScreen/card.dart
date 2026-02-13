@@ -12,20 +12,20 @@ class CardWidgetGride extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
-      shrinkWrap: true,
+
 
       itemCount: 10,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2, //crossAxisSpacing: 10,
-        //mainAxisSpacing: 10,
+        crossAxisCount: 2, crossAxisSpacing: 10,
+        mainAxisSpacing: 10,
         childAspectRatio: 0.8,
       ),
       itemBuilder: (i, c) => Container(
-        margin: EdgeInsets.only(bottom: 10, right: 10, left: 10),
+       // margin: EdgeInsets.only(bottom: 10, right: 10, left: 10),
         height: 236,
         width: 190,
         decoration: BoxDecoration(
-          color: Color(0xffF2FCF4),
+          color:Color(0xffF2FCF4),
           borderRadius: BorderRadius.circular(10),
         ),
         child: Padding(

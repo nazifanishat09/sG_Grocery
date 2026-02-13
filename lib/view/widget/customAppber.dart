@@ -10,21 +10,18 @@ class CustomAppBerWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 20,bottom:30,left: 10),
-      child: Row(
-        spacing: 30,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Image(image: AssetImage("assets/backArrowWhite.png")),
-          CustomTextWidget(
-            title: title,
-            fs: 22,
-            fw: FontWeight.w700,
-            fc: Colors.white,
-          ),
-        ],
-      ),
+    return Row(
+      spacing: 30,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Image(image: AssetImage("assets/backArrowWhite.png")),
+        CustomTextWidget(
+          title: title,
+          fs: 22,
+          fw: FontWeight.w700,
+          fc: Colors.white,
+        ),
+      ],
     );
   }
 }
