@@ -10,7 +10,7 @@ class CouponCardWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(bottom: 20),
       child: Stack(
-        clipBehavior: Clip.none,
+        //clipBehavior: Clip.none,
         children: [
           Row(
             spacing: 1,
@@ -19,6 +19,13 @@ class CouponCardWidget extends StatelessWidget {
                 width: 270,
                 height: 127,
                 decoration: BoxDecoration(
+                  // boxShadow: [
+                  //   BoxShadow(
+                  //     blurRadius: 50,
+                  //     offset: Offset(9,9),
+                  //     color: Colors.grey,
+                  //   ),
+                  // ],
 
                   color: Color(0xff60C370),
                   borderRadius: BorderRadius.only(

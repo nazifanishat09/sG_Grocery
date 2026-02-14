@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:sg_grocery/view/myCart/paymentDetails.dart';
+import 'package:sg_grocery/view/widget/button_widget.dart';
 import 'package:sg_grocery/view/widget/customAppber.dart';
 import 'package:sg_grocery/view/widget/custom_text.dart';
 
@@ -85,101 +87,17 @@ class _MyCartScreenState extends State<MyCartScreen> {
                 fs: 22,
                 fc: Colors.grey[800],
               ),
-              SizedBox(height: 10,),
-              Card(color: Colors.white,
-                child: Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(10),
-                      child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          CustomTextWidget(
-                            title: "Total MRP",
-                            fw: FontWeight.w400,
-                            fs: 16,
-                            fc: Colors.grey[600],
-                          ),
-                          CustomTextWidget(
-                            title: "\$ 9.97",
-                            fw: FontWeight.w400,
-                            fs: 16,
-                            fc: Colors.grey[600],
-                          ),
-                        ],
-                      ),
-                    ),
-                    Divider(),
-                    Padding(
-                      padding: const EdgeInsets.all(10),
-                      child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          CustomTextWidget(
-                            title: "Discount",
-                            fw: FontWeight.w400,
-                            fs: 16,
-                            fc: Colors.grey[600],
-                          ),
-                          CustomTextWidget(
-                            title: "\$ 0.00",
-                            fw: FontWeight.w400,
-                            fs: 1,
-                            fc: Colors.grey[600],
-                          ),
-                        ],
-                      ),
-                    ),
-                    Divider(),
-                    Padding(
-                      padding: const EdgeInsets.all(10),
-                      child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          CustomTextWidget(
-                            title: "Shipping Charges",
-                            fw: FontWeight.w400,
-                            fs: 16,
-                            fc: Colors.grey[600],
-                          ),
-                          CustomTextWidget(
-                            title: "Free",
-                            fw: FontWeight.w400,
-                            fs: 16,
-                            fc: Colors.grey[600],
-                          ),
-                        ],
-                      ),
-                    ),
-
-                    Container(
-                      padding: EdgeInsets.all(10),
-                      height: 40,
-                      width: 396,
-                      decoration: BoxDecoration(
-                        color: Color(0xffDCFFE2),
-                        borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(10),
-                          bottomRight: Radius.circular(10),
-                        ),
-                      ),
-                      child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          CustomTextWidget(
-                            title: "Total",
-                            fw: FontWeight.w600,
-                            fs: 18,
-                            fc: Colors.grey[800],
-                          ),
-                          CustomTextWidget(
-                            title: "\$ 9.97",
-                            fw: FontWeight.w600,
-                            fs: 18,
-                            fc: Colors.grey[800],
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
+              SizedBox(height: 10),
+              PaymentDetailsCard(),SizedBox(height: 10,),
+              Center(
+                child: ButtonWidget(
+                  title: "Checkout",
+                  bHeight: 50,
+                  bWidth: 200,
+                  radius: 5,
+                  cC: Colors.green,fc: Colors.white,fs: 18,fw: FontWeight.w600,
                 ),
-              ),
+              ),SizedBox(height: 10,),
             ],
           ),
         ),
