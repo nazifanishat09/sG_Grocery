@@ -41,7 +41,7 @@ class _MyCartScreenState extends State<MyCartScreen> {
               DropdownButton<String>(
                 icon: Image(image: AssetImage("assets/dropdown.png")),
                 underline: SizedBox(),
-                hint: CustomTextWidget(title: 'Tomorrow, 7 AM - 9 PM', fs: 10),
+                hint: CustomTextWidget(title: 'Tomorrow, 7 AM - 9 PM',),
                 value: value == "" ? null : value,
 
                 items: nameL
