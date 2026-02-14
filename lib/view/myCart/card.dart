@@ -1,0 +1,90 @@
+import 'package:flutter/material.dart';
+
+import '../widget/custom_text.dart';
+
+class NewCardWidget extends StatelessWidget {
+  const NewCardWidget({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      shadowColor: Colors.green,
+      elevation: 2,
+      //color: Colors.white,
+      child: Padding(
+        padding: const EdgeInsets.all(10),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: Image(image: AssetImage("assets/tomato.png")),
+            ),
+
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  spacing: 50,
+                  children: [
+                    CustomTextWidget(
+                      title: "Organic Tomatoes",
+                      fs: 18,
+                      fw: FontWeight.w400,
+                      fc: Colors.grey[800],
+                    ),
+
+                    Icon(Icons.close),
+                  ],
+                ),
+                CustomTextWidget(
+                  title: "1 Kg",
+                  fs: 14,
+                  fw: FontWeight.w400,
+                  fc: Colors.grey,
+                ),
+
+                Row(
+                  spacing: 10,
+
+                  children: [
+                    CustomTextWidget(
+                      title: "\$2",
+                      fs: 18,
+                      fw: FontWeight.w400,
+                      fc: Colors.grey[800],
+                    ),
+                    SizedBox(width: 10),
+                    CustomTextWidget(
+                      title: "\$3.25",
+                      fs: 18,
+                      fw: FontWeight.w400,
+                      fc: Colors.grey[400],
+                      lineT: TextDecoration.lineThrough,
+                    ),
+                    SizedBox(width: 30),
+                    Image(image: AssetImage("assets/minus.png")),
+                    CustomTextWidget(
+                      title: "1",
+                      fs: 24,
+                      fw: FontWeight.w600,
+                      fc: Colors.green,
+                    ),
+
+                    Icon(
+                      Icons.add_circle,
+                      color: Colors.green,
+                      size: 24,
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
