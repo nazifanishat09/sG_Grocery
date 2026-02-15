@@ -12,7 +12,7 @@ final TextInputType kyboard;
     return TextFormField(
       keyboardType: kyboard,
       cursorColor: Colors.green,
-      decoration: InputDecoration(
+      decoration: InputDecoration(fillColor: Colors.red,filled: true,
         hintText: title,
         hintStyle: TextStyle(fontWeight: FontWeight.w400, fontSize: 16),
         border: OutlineInputBorder(
