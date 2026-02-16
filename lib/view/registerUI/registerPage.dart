@@ -35,21 +35,21 @@ class _RegisterpageState extends State<Registerpage> {
               SizedBox(height: 10),
               TextFormFieldWidget(
                 title: 'Enter Your Name',
-                kyboard: TextInputType.text,
+                kyboard: TextInputType.text, bC: Colors.green, radius: 10,
               ),
               SizedBox(height: 20),
               CustomTextWidget(title: "Email Id", fs: 18, fw: FontWeight.w500),
               SizedBox(height: 10),
               TextFormFieldWidget(
                 title: 'Enter Your Email Id',
-                kyboard: TextInputType.emailAddress,
+                kyboard: TextInputType.emailAddress, bC: Colors.green, radius: 10,
               ),
               SizedBox(height: 20),
               CustomTextWidget(title: "Password", fs: 18, fw: FontWeight.w500),
               SizedBox(height: 10),
               TextFormFieldWidget(
                 title: 'Enter Your Password',
-                kyboard: TextInputType.visiblePassword,
+                kyboard: TextInputType.visiblePassword, bC: Colors.green, radius: 10,
               ),
               SizedBox(height: 20),
               CustomTextWidget(
@@ -60,7 +60,7 @@ class _RegisterpageState extends State<Registerpage> {
               SizedBox(height: 10),
               TextFormFieldWidget(
                 title: 'Confirm Your Password',
-                kyboard: TextInputType.visiblePassword,
+                kyboard: TextInputType.visiblePassword, bC: Colors.green, radius: 10,
               ),
               SizedBox(height: 20),
               CustomTextWidget(
@@ -71,7 +71,7 @@ class _RegisterpageState extends State<Registerpage> {
               SizedBox(height: 10),
               TextFormFieldWidget(
                 title: 'Enter Your Contact Number',
-                kyboard: TextInputType.number,
+                kyboard: TextInputType.number, bC: Colors.green, radius: 10,
               ),
               SizedBox(height: 20),
               ButtonWidget(

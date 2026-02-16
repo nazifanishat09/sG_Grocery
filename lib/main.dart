@@ -9,9 +9,20 @@ import 'package:sg_grocery/view/mySubscription/mySubscription.dart';
 import 'package:sg_grocery/view/paymentScreen/paymentScreen.dart';
 import 'package:sg_grocery/view/registerUI/registerPage.dart';
 import 'package:sg_grocery/view/splash/splash_page.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(
+    ScreenUtilInit(
+      designSize: const Size(360, 690),
+      minTextAdapt: true,
+      splitScreenMode: true,
+
+      builder: (_, child) {
+        return MyApp();
+      },
+    ),
+  );
 }
 
 class MyApp extends StatefulWidget {
@@ -24,7 +35,6 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false,
-        home: PaymentScreen());
+    return MaterialApp(debugShowCheckedModeBanner: false, home: MyCartScreen());
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../widget/custom_text.dart';
 
@@ -27,11 +28,11 @@ class NewCardWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
-                  spacing: 50,
+                  spacing: 40.w,
                   children: [
                     CustomTextWidget(
                       title: "Organic Tomatoes",
-                      fs: 18,
+                      fs: 18.sp,
                       fw: FontWeight.w400,
                       fc: Colors.grey[800],
                     ),
@@ -41,34 +42,34 @@ class NewCardWidget extends StatelessWidget {
                 ),
                 CustomTextWidget(
                   title: "1 Kg",
-                  fs: 14,
+                  fs: 14.sp,
                   fw: FontWeight.w400,
                   fc: Colors.grey,
                 ),
 
                 Row(
-                  spacing: 10,
+                  spacing: 10.w,
 
                   children: [
                     CustomTextWidget(
                       title: "\$2",
-                      fs: 18,
+                      fs: 18.sp,
                       fw: FontWeight.w400,
                       fc: Colors.grey[800],
                     ),
-                    SizedBox(width: 10),
+                    SizedBox(width: 10.w),
                     CustomTextWidget(
                       title: "\$3.25",
-                      fs: 18,
+                      fs: 18.sp,
                       fw: FontWeight.w400,
                       fc: Colors.grey[400],
                       lineT: TextDecoration.lineThrough,
                     ),
-                    SizedBox(width: 30),
+                    SizedBox(width: 25.sp),
                     Image(image: AssetImage("assets/minus.png")),
                     CustomTextWidget(
                       title: "1",
-                      fs: 24,
+                      fs: 24.sp,
                       fw: FontWeight.w600,
                       fc: Colors.green,
                     ),
@@ -76,7 +77,7 @@ class NewCardWidget extends StatelessWidget {
                     Icon(
                       Icons.add_circle,
                       color: Colors.green,
-                      size: 24,
+                      size: 24.r,
                     ),
                   ],
                 ),

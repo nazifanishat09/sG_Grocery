@@ -42,7 +42,14 @@ class _PaymentScreenState extends State<PaymentScreen> {
                     fs: 22,
                     fc: Colors.grey[800],
                   ),
-                  TextFormFieldWidget(title: "First name", kyboard: TextInputType.text)
+                  TextFormFieldWidget(
+                    border: OutlineInputBorder(borderSide: BorderSide.none,borderRadius: BorderRadius.circular(10)),
+                    title: "First name",
+                    kyboard: TextInputType.text,
+                    bgC: Colors.grey[200],
+                    bC: Colors.grey[200],
+                    radius: 10,
+                  ),
                 ],
               ),
             ),

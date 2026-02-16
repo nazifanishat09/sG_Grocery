@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../widget/custom_text.dart';
 
@@ -12,27 +13,27 @@ final String title;
   final String img;
   @override
   Widget build(BuildContext context) {
-    return SizedBox(height: 150,
+    return SizedBox(height: 150.h,
       child: ListView.builder(itemCount: 10,
         scrollDirection: Axis.horizontal,
         itemBuilder: (i,c)=> Container(
           margin: EdgeInsets.symmetric(horizontal: 10),
-          height: 150,
-          width: 114,
+          height: 150.h,
+          width: 114.w,
           decoration: BoxDecoration(
             color:  Color(0xffF2FCF4),
-            borderRadius: BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(10.r),
           ),
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 5),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [SizedBox(height: 10,),
-                Center(child: Image(image: AssetImage("$img"),height: 53,width: 76,)),
+                Center(child: Image(image: AssetImage(img),height: 53.h,width: 76.h,)),
                 SizedBox(height: 8,),
                 CustomTextWidget(
                   title: title,
-                  fs: 12,
+                  fs: 12.sp,
                   fw: FontWeight.w500,fc:Colors.grey[700] ,
                 ),
                 Row(
