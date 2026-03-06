@@ -7,7 +7,7 @@ class TextFormFieldWidget extends StatelessWidget {
     required this.kyboard,
     this.bgC,
     this.bC,
-    required this.radius, this.border,
+    required this.radius, this.border, this.pIcon,
   });
   final String title;
   final TextInputType kyboard;
@@ -15,13 +15,14 @@ class TextFormFieldWidget extends StatelessWidget {
   final Color? bC;
   final double radius;
   final InputBorder? border;
+  final IconData? pIcon;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       keyboardType: kyboard,
       cursorColor: Colors.green,
-      decoration: InputDecoration(
+      decoration: InputDecoration(prefixIcon: Icon(pIcon ?? Icons.add_circle),
         fillColor: bgC,
         filled: true,
         hintText: title,
