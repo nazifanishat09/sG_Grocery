@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sg_grocery/view/HomeUi/card1.dart';
-import 'package:sg_grocery/view/HomeUi/slider_ui.dart';
+import 'package:sg_grocery/view/widget/slider_ui.dart';
 import 'package:sg_grocery/view/widget/custom_text.dart';
 
 import '../widget/searchBer.dart';

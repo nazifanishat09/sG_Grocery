@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sg_grocery/view/widget/button_widget.dart';
 import 'package:sg_grocery/view/widget/customAppber.dart';
 import 'package:sg_grocery/view/widget/custom_text.dart';
+import 'package:sg_grocery/view/widget/slider_ui.dart';
 import 'package:sg_grocery/view/widget/textFormField.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 
@@ -16,8 +17,15 @@ class PaymentScreen extends StatefulWidget {
 }
 
 class _PaymentScreenState extends State<PaymentScreen> {
-  bool active = true;
+  //bool active = true;
   int selectedIndex = 0;
+  List <String> sl=[
+    "https://cdn.pixabay.com/photo/2016/05/03/12/19/credit-card-1369111_1280.png",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE-efZWdXA39p06Rj5QnSDfZZfV7g9FmXUOw&s",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXkEgVPf3FrLN3cTspZnMrxf6wn0qNhyLYIg&s",
+
+
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -123,7 +131,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                         Icon(Icons.add_circle_outline, color: Colors.green),
                         CustomTextWidget(
                           title: "Add New Address",
-                          fs: 18,
+                          fs: 18.r,
                           fw: FontWeight.w600,
                           fc: Colors.green,
                         ),
@@ -131,13 +139,13 @@ class _PaymentScreenState extends State<PaymentScreen> {
                     ),
                     CustomTextWidget(
                       title: "Do you have a promo code / Coupon ?",
-                      fs: 18,
+                      fs: 18.r,
                       fw: FontWeight.w600,
                     ),
                     TextFormFieldWidget(
                       title: "Enter your code",
                       kyboard: TextInputType.text,
-                      radius: 10,
+                      radius: 10.r,
                       pIcon: Icons.sell_outlined,
                       border: OutlineInputBorder(
                         borderSide: BorderSide.none,
@@ -146,13 +154,62 @@ class _PaymentScreenState extends State<PaymentScreen> {
                     ),
                     Center(
                       child: ButtonWidget(
-                        title: "Apply Now",fc: Colors.white,fs: 18,fw: FontWeight.w600,
-                        bHeight: 50,
-                        bWidth: 200,
-                        radius: 10,
+                        title: "Apply Now",
+                        fc: Colors.white,
+                        fs: 18.sp,
+                        fw: FontWeight.w600,
+                        bHeight: 50.h,
+                        bWidth: 200.w,
+                        radius: 10.r,
                         cC: Colors.green,
                       ),
                     ),
+                    CustomTextWidget(
+                      title: "Choose payment method",
+                      fs: 22.sp,
+                      fw: FontWeight.w600,
+                    ),
+
+                    ListView.builder(
+                      shrinkWrap: true,
+                      itemCount: 4,
+                      itemBuilder: (context, index) => Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          height: 50.h,
+                          width: 340.w,
+                          decoration: BoxDecoration(
+                            color: Colors.green[50],
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Row(
+                            children: [
+                              RadioButton(index),
+                              CustomTextWidget(
+                                title: "Cash On Delivery",
+                                fs: 16,
+                                fw: FontWeight.w400,
+                                fc: Colors.grey,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Icon(Icons.add_circle_outline, color: Colors.green),
+                        CustomTextWidget(
+                          title: "Add New Card",
+                          fs: 16,
+                          fw: FontWeight.w600,
+                          fc: Colors.green,
+                        ),
+                      ],
+                    ),
+                    SliderWidget(sl: sl ),
+
                   ],
                 ),
               ),
