@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:sg_grocery/view/widget/button_widget.dart';
 import 'package:sg_grocery/view/widget/customAppber.dart';
 import 'package:sg_grocery/view/widget/custom_text.dart';
 import 'package:sg_grocery/view/widget/textFormField.dart';
@@ -143,7 +144,15 @@ class _PaymentScreenState extends State<PaymentScreen> {
                         borderRadius: BorderRadius.circular(10),
                       ),
                     ),
-
+                    Center(
+                      child: ButtonWidget(
+                        title: "Apply Now",fc: Colors.white,fs: 18,fw: FontWeight.w600,
+                        bHeight: 50,
+                        bWidth: 200,
+                        radius: 10,
+                        cC: Colors.green,
+                      ),
+                    ),
                   ],
                 ),
               ),
