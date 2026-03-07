@@ -7,7 +7,7 @@ class TextFormFieldWidget extends StatelessWidget {
     required this.kyboard,
     this.bgC,
     this.bC,
-    required this.radius, this.border, this.pIcon,
+    required this.radius, this.border, this.pIcon, this.fBorder,
   });
   final String title;
   final TextInputType kyboard;
@@ -15,6 +15,7 @@ class TextFormFieldWidget extends StatelessWidget {
   final Color? bC;
   final double radius;
   final InputBorder? border;
+  final InputBorder? fBorder;
   final IconData? pIcon;
 
   @override
@@ -22,7 +23,7 @@ class TextFormFieldWidget extends StatelessWidget {
     return TextFormField(
       keyboardType: kyboard,
       cursorColor: Colors.green,
-      decoration: InputDecoration(prefixIcon: Icon(pIcon ?? Icons.add_circle),
+      decoration: InputDecoration(prefixIcon:pIcon != null ? Icon(pIcon) : null,
         fillColor: bgC,
         filled: true,
         hintText: title,
@@ -30,7 +31,7 @@ class TextFormFieldWidget extends StatelessWidget {
         border: border?? OutlineInputBorder(borderRadius: BorderRadius.circular(radius),
         ),
 
-        focusedBorder: border ?? OutlineInputBorder(
+        focusedBorder: fBorder ?? OutlineInputBorder(
           borderRadius: BorderRadius.circular(radius),
           borderSide:  BorderSide(color: bC ?? Colors.green),
         ),

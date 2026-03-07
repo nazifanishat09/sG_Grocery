@@ -19,12 +19,10 @@ class PaymentScreen extends StatefulWidget {
 class _PaymentScreenState extends State<PaymentScreen> {
   //bool active = true;
   int selectedIndex = 0;
-  List <String> sl=[
+  List<String> sl = [
     "https://cdn.pixabay.com/photo/2016/05/03/12/19/credit-card-1369111_1280.png",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE-efZWdXA39p06Rj5QnSDfZZfV7g9FmXUOw&s",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXkEgVPf3FrLN3cTspZnMrxf6wn0qNhyLYIg&s",
-
-
   ];
 
   @override
@@ -208,8 +206,43 @@ class _PaymentScreenState extends State<PaymentScreen> {
                         ),
                       ],
                     ),
-                    SliderWidget(sl: sl ),
+                    SliderWidget(sl: sl),
+                    Container(
+                      height: 42.h,
+                      width: 364.w,
+                      decoration: BoxDecoration(
+                        color: Colors.green,
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: CustomTextWidget(
+                              title: "Enter CVV",
+                              fs: 16,
+                              fw: FontWeight.w600,
+                              fc: Colors.white,
+                            ),
+                          ),
 
+                          SizedBox(width: 10.w),
+                          Expanded(
+                            child: TextFormFieldWidget(
+                              title: "e.g. 123",
+                              kyboard: TextInputType.text,
+                              bgC: Colors.white,
+                              radius: 10,
+                              bC: Colors.green,
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(10),
+                                borderSide: BorderSide(color: Colors.green),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               ),
