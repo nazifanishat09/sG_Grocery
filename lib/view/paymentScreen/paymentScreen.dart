@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:sg_grocery/view/paymentScreen/richText.dart';
 import 'package:sg_grocery/view/widget/button_widget.dart';
 import 'package:sg_grocery/view/widget/customAppber.dart';
 import 'package:sg_grocery/view/widget/custom_text.dart';
@@ -243,6 +244,19 @@ class _PaymentScreenState extends State<PaymentScreen> {
                         ],
                       ),
                     ),
+                    Center(
+                      child: ButtonWidget(
+                        title: "Pay \$9.97",
+                        bHeight: 50.h,
+                        bWidth: 200.w,
+                        radius: 10.r,
+                        cC: Colors.green,
+                        fc: Colors.white,
+                        fs: 18,
+                        fw: FontWeight.w600,
+                      ),
+                    ),
+                    RichTextWidget(),
                   ],
                 ),
               ),
@@ -265,3 +279,4 @@ class _PaymentScreenState extends State<PaymentScreen> {
     );
   }
 }
+
