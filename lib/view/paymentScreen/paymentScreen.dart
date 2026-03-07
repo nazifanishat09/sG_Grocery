@@ -135,12 +135,12 @@ class _PaymentScreenState extends State<PaymentScreen> {
                           fc: Colors.green,
                         ),
                       ],
-                    ),
+                    ), SizedBox(height: 10.h,),
                     CustomTextWidget(
                       title: "Do you have a promo code / Coupon ?",
                       fs: 18.r,
                       fw: FontWeight.w600,
-                    ),
+                    ), SizedBox(height: 10.h,),
                     TextFormFieldWidget(
                       title: "Enter your code",
                       kyboard: TextInputType.text,
@@ -150,7 +150,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                         borderSide: BorderSide.none,
                         borderRadius: BorderRadius.circular(10),
                       ),
-                    ),
+                    ), SizedBox(height: 10.h,),
                     Center(
                       child: ButtonWidget(
                         title: "Apply Now",
@@ -162,7 +162,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                         radius: 10.r,
                         cC: Colors.green,
                       ),
-                    ),
+                    ), SizedBox(height: 10.h,),
                     CustomTextWidget(
                       title: "Choose payment method",
                       fs: 22.sp,
@@ -194,7 +194,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                           ),
                         ),
                       ),
-                    ),
+                    ), SizedBox(height: 10.h,),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
@@ -206,8 +206,8 @@ class _PaymentScreenState extends State<PaymentScreen> {
                           fc: Colors.green,
                         ),
                       ],
-                    ),
-                    SliderWidget(sl: sl),
+                    ), SizedBox(height: 10.h,),
+                    SliderWidget(sl: sl), SizedBox(height: 10.h,),
                     Container(
                       height: 42.h,
                       width: 364.w,
@@ -243,7 +243,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                           ),
                         ],
                       ),
-                    ),
+                    ), SizedBox(height: 10.h,),
                     Center(
                       child: ButtonWidget(
                         title: "Pay \$9.97",
@@ -256,6 +256,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                         fw: FontWeight.w600,
                       ),
                     ),
+                    SizedBox(height: 10.h,),
                     RichTextWidget(),
                   ],
                 ),
